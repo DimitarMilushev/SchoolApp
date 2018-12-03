@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
-using SchoolApp.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -11,8 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SchoolApp.Data;
+using SchoolApp.Data.Models;
 using SchoolApp.Web.Models;
-using SchoolApp.Web.Areas.Identity.Data;
 
 namespace SchoolApp.Web
 {
