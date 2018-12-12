@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Web", "Web\SchoolApp.Web\SchoolApp.Web.csproj", "{6E72E385-6FEA-436A-A38E-8FB92220EFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Web", "Web\SchoolApp.Web\SchoolApp.Web.csproj", "{6E72E385-6FEA-436A-A38E-8FB92220EFF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1A6D7C24-576F-4728-B078-EF5D04E4051A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D499B12A-4AC3-4AFE-A298-4E12A5AB5816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Data", "Data\SchoolApp.Data\SchoolApp.Data.csproj", "{A99CDC5D-FBD3-49C5-87A8-DD7F3E767B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Data", "Data\SchoolApp.Data\SchoolApp.Data.csproj", "{A99CDC5D-FBD3-49C5-87A8-DD7F3E767B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Data.Models", "Data\SchoolApp.Data.Models\SchoolApp.Data.Models.csproj", "{E78A3CEE-46D8-4EE5-987D-D97D90291DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Data.Models", "Data\SchoolApp.Data.Models\SchoolApp.Data.Models.csproj", "{E78A3CEE-46D8-4EE5-987D-D97D90291DEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{88ED5F04-2CB9-419B-AA41-7F0774FB9E0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "Tests\Sandbox\Sandbox.csproj", "{8D033EE9-B9AF-481B-B374-4F3FCB7044BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Data.Common", "SchoolApp.Data.Common\SchoolApp.Data.Common.csproj", "{6CA36703-F43E-40AD-9231-44D7398F6F25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,14 @@ Global
 		{E78A3CEE-46D8-4EE5-987D-D97D90291DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E78A3CEE-46D8-4EE5-987D-D97D90291DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E78A3CEE-46D8-4EE5-987D-D97D90291DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D033EE9-B9AF-481B-B374-4F3FCB7044BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D033EE9-B9AF-481B-B374-4F3FCB7044BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D033EE9-B9AF-481B-B374-4F3FCB7044BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D033EE9-B9AF-481B-B374-4F3FCB7044BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA36703-F43E-40AD-9231-44D7398F6F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA36703-F43E-40AD-9231-44D7398F6F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA36703-F43E-40AD-9231-44D7398F6F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA36703-F43E-40AD-9231-44D7398F6F25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +53,8 @@ Global
 		{6E72E385-6FEA-436A-A38E-8FB92220EFF6} = {1A6D7C24-576F-4728-B078-EF5D04E4051A}
 		{A99CDC5D-FBD3-49C5-87A8-DD7F3E767B39} = {D499B12A-4AC3-4AFE-A298-4E12A5AB5816}
 		{E78A3CEE-46D8-4EE5-987D-D97D90291DEA} = {D499B12A-4AC3-4AFE-A298-4E12A5AB5816}
+		{8D033EE9-B9AF-481B-B374-4F3FCB7044BD} = {88ED5F04-2CB9-419B-AA41-7F0774FB9E0E}
+		{6CA36703-F43E-40AD-9231-44D7398F6F25} = {D499B12A-4AC3-4AFE-A298-4E12A5AB5816}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5D87837-4C1D-4EFA-9DB0-89864E61EC42}
