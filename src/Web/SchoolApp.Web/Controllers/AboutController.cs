@@ -10,5 +10,8 @@ namespace SchoolApp.Web.Controllers
     public class AboutController : BaseController
     {
         public IActionResult History() => this.View();
+
+        public IActionResult Contacts() => this.View();
+
     }
 }

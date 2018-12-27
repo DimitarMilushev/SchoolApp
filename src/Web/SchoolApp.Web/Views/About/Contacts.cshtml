@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Contacts";
+}
+
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px; /* The height is 400 pixels */
+        width: 600px; /* The width is the width of the web page */
+    }
+</style>
+<div class="row justify-content-around">
+    <div class="col">
+        <h1>Контакти</h1>
+        <hr style="border: 1px solid" />
+        <h2>Обща канцелария:</h2>
+        <hr />
+        <p>
+            <i class="fas fa-map-marker-alt"></i> Адрес: ул.”Цанко Церковски „№ 2
+            Благоевград
+            2700
+        </p>
+        <br />
+        <h2>Дирекция:</h2>
+        <hr />
+        <p><i class="fas fa-phone"></i> Телефон: +359 73 83 13 15</p>
+        <p><i class="fas fa-envelope"></i> Имейл: nhgym@mail.bg</p>
+    </div>
+    <div class="col">
+        <div id="map"></div>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 42.023997, lng: 23.100815 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 18, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script>
+        <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWqnTK48PPOUMuuFKS01g6TZ3-TCluii0&callback=initMap">
+        </script>
+    </div>
+</div>
