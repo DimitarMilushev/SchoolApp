@@ -423,10 +423,10 @@ h6, .h6 {
 }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid;
 }
 
 small,
@@ -2986,23 +2986,24 @@ input[type="button"].btn-block {
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #43106c;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    
 }
 
 .dropdown-menu-right {
@@ -3117,16 +3118,16 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
-  font-weight: 400;
-  color: #212529;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
@@ -3880,7 +3881,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -3970,7 +3971,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: initial;
 }
 
 .navbar > .container,
@@ -4051,6 +4052,7 @@ input[type="button"].btn-block {
   cursor: pointer;
 }
 
+
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;
@@ -4084,8 +4086,8 @@ input[type="button"].btn-block {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
@@ -7524,6 +7526,7 @@ button.bg-dark:focus {
 
 .mb-3,
 .my-3 {
+  margin-top: 1rem !important;
   margin-bottom: 1rem !important;
 }
 

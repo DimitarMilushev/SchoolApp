@@ -11,21 +11,16 @@ namespace SchoolApp.Web.Controllers
 {
     public class HomeController : BaseController
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => this.View();
+
+        public IActionResult History() => this.View();
+
+        public IActionResult Contacts() => this.View();
+
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
 
             return View();
         }

@@ -47,26 +47,63 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="History">За Училището</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                За Гимназията
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="About" asp-action="History">История</a>
+
+                                <a class="dropdown-item" asp-controller="Personnel" asp-action="Council">Ръководство</a>
+                                <a class="dropdown-item" asp-controller="Personnel" asp-action="Teachers">Учителски състав</a>
+                                <a class="dropdown-item" asp-controller="Personnel" asp-action="Administration">Администрация</a>
+                                <a class="dropdown-item" asp-controller="Personnel" asp-action="Pedagogue">Педагог. съветник</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Обучение
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Teachers">За учители</a>
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Students">За ученици</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Прием - @DateTime.UtcNow.Year/@DateTime.UtcNow.AddYears(1).Year г.
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Teachers">За учители</a>
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Students">За ученици</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Проекти
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Teachers">За учители</a>
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Students">За ученици</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Награди
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Teachers">За учители</a>
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Students">За ученици</a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Contacts">Обучение</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Прием - @DateTime.UtcNow.Year/@DateTime.UtcNow.AddYears(1).Year г. </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Проекти</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Награди</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Contacts">Контакти</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contacts">Контакти</a>
                         </li>
                     </ul>
-                </div>
+                    </div>
             </div>
         </nav>
     </header>
@@ -83,11 +120,8 @@
     <footer class=" text-white bg-schoolSite">
         <div class="container clearfix">
             <div class="row justify-content-center">
-                <a class="col-sm-2" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="http://nhg-blg.com/NHG_11z.jpg" alt="NHG" />
-                </a>
                 <a class="col justify-content-center">
-                    <hr style="height:20pt; visibility:hidden;" />
+                    <hr style="height:5pt; visibility:hidden;" />
                     <p><i class="fas fa-phone"></i> Телефон: +359 73 83 13 15</p>
                     <p><i class="fas fa-envelope"></i> Имейл: nhgym@mail.bg</p>
                     <p>
@@ -95,6 +129,8 @@
                         Благоевград
                         2700
                     </p>
+                    <hr style="height:5pt; visibility:hidden;" />
+
                 </a>                
             </div>
         </div>
