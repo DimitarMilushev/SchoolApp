@@ -1,7 +1,7 @@
 @using SchoolApp.Data.Models
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<SchoolAppUser> SignInManager
-@inject UserManager<SchoolAppUser> UserManager
+@inject SignInManager<Person> SignInManager
+@inject UserManager<Person> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

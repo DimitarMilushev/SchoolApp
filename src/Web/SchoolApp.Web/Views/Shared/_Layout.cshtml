@@ -21,9 +21,9 @@
 </head>
 <body>
     <header>
-        <div class="container clearfix">
+        <div class="container">
             <div class="row justify-content-center">
-                <a class="col-sm-2" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="col-md-2" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="http://nhg-blg.com/NHG_11z.jpg" alt="NHG" />
                 </a>
                 <a class="col justify-content-center">
@@ -35,7 +35,7 @@
 
         </div>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-schoolSite border-bottom box-shadow mb-3">
-            <div class="container">
+            <div class="container clearfix">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -69,7 +69,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" asp-controller="Education" asp-action="Teachers">За учители</a>
-                                <a class="dropdown-item" asp-controller="Education" asp-action="Students">За ученици</a>
+                                <a class="dropdown-item" asp-controller="Education" asp-action="Persons">За ученици</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
