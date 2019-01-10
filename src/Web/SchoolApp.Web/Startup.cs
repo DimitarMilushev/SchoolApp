@@ -8,6 +8,10 @@ using Microsoft.Extensions.DependencyInjection;
 using SchoolApp.Data;
 using SchoolApp.Data.Common;
 using SchoolApp.Data.Models;
+using SchoolApp.Services.DataServices.Council;
+using SchoolApp.Services.Mapping;
+using SchoolApp.Services.Models.Council;
+using SchoolApp.Web.Models.Personnel;
 
 namespace SchoolApp.Web
 {
@@ -23,6 +27,10 @@ namespace SchoolApp.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            AutoMapperConfig.RegisterMappings(
+                typeof(CouncilViewModel).Assembly,
+                typeof(CreatePersonInputModel).Assembly);
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -35,7 +43,7 @@ namespace SchoolApp.Web
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<SchoolAppUser>(options =>
+            services.AddDefaultIdentity<Person>(options =>
                 {
                     options.Password.RequiredLength = 3;
                     options.Password.RequireLowercase = false;
@@ -49,7 +57,10 @@ namespace SchoolApp.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             //Application services
+            
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<ICouncilService, CouncilService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

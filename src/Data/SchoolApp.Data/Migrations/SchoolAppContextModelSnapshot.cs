@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using SchoolApp.Data;
 
 namespace SchoolApp.Data.Migrations
 {
@@ -14,7 +15,7 @@ namespace SchoolApp.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -128,7 +129,7 @@ namespace SchoolApp.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("SchoolApp.Web.Areas.Identity.Data.SchoolAppUser", b =>
+            modelBuilder.Entity("SchoolApp.Data.Models.Person", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -138,10 +139,16 @@ namespace SchoolApp.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Department");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -158,6 +165,10 @@ namespace SchoolApp.Data.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("PictureUrl");
+
+                    b.Property<int>("Role");
 
                     b.Property<string>("SecurityStamp");
 
@@ -189,7 +200,7 @@ namespace SchoolApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("SchoolApp.Web.Areas.Identity.Data.SchoolAppUser")
+                    b.HasOne("SchoolApp.Data.Models.Person")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -197,7 +208,7 @@ namespace SchoolApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("SchoolApp.Web.Areas.Identity.Data.SchoolAppUser")
+                    b.HasOne("SchoolApp.Data.Models.Person")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -210,7 +221,7 @@ namespace SchoolApp.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SchoolApp.Web.Areas.Identity.Data.SchoolAppUser")
+                    b.HasOne("SchoolApp.Data.Models.Person")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -218,7 +229,7 @@ namespace SchoolApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("SchoolApp.Web.Areas.Identity.Data.SchoolAppUser")
+                    b.HasOne("SchoolApp.Data.Models.Person")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

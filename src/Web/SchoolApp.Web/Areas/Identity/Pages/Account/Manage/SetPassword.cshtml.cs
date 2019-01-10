@@ -12,12 +12,12 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
-        private readonly SignInManager<SchoolAppUser> _signInManager;
+        private readonly UserManager<Person> _userManager;
+        private readonly SignInManager<Person> _signInManager;
 
         public SetPasswordModel(
-            UserManager<SchoolAppUser> userManager,
-            SignInManager<SchoolAppUser> signInManager)
+            UserManager<Person> userManager,
+            SignInManager<Person> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

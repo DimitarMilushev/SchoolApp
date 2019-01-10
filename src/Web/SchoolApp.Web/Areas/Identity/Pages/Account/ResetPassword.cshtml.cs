@@ -14,9 +14,9 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly UserManager<Person> _userManager;
 
-        public ResetPasswordModel(UserManager<SchoolAppUser> userManager)
+        public ResetPasswordModel(UserManager<Person> userManager)
         {
             _userManager = userManager;
         }

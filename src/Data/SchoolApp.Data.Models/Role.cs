@@ -4,8 +4,10 @@ using System.Text;
 
 namespace SchoolApp.Data.Models
 {
-    public class SchoolAppPhotos
+    public enum Role
     {
-        
+        Teacher = 0,
+        Director = 1,
+        DeputyDirector = 2
     }
 }

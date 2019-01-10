@@ -14,13 +14,13 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
-        private readonly SignInManager<SchoolAppUser> _signInManager;
+        private readonly UserManager<Person> _userManager;
+        private readonly SignInManager<Person> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public IndexModel(
-            UserManager<SchoolAppUser> userManager,
-            SignInManager<SchoolAppUser> signInManager,
+            UserManager<Person> userManager,
+            SignInManager<Person> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;

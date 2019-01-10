@@ -4,12 +4,14 @@ using SchoolApp.Data.Models;
 
 namespace SchoolApp.Data
 {
-    public class SchoolAppContext : IdentityDbContext<SchoolAppUser>
+    public class SchoolAppContext : IdentityDbContext<Person>
     {
         public SchoolAppContext(DbContextOptions<SchoolAppContext> options)
             : base(options)
         {
         }
+
+        public DbSet<Person> People { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

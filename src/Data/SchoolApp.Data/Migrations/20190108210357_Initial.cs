@@ -40,7 +40,12 @@ namespace SchoolApp.Data.Migrations
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    PictureUrl = table.Column<string>(nullable: true),
+                    Role = table.Column<int>(nullable: false),
+                    Department = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

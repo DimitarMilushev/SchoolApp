@@ -14,11 +14,11 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly UserManager<Person> _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
 
         public DownloadPersonalDataModel(
-            UserManager<SchoolAppUser> userManager,
+            UserManager<Person> userManager,
             ILogger<DownloadPersonalDataModel> logger)
         {
             _userManager = userManager;
@@ -37,7 +37,7 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 
             // Only include personal data for download
             var personalData = new Dictionary<string, string>();
-            var personalDataProps = typeof(SchoolAppUser).GetProperties().Where(
+            var personalDataProps = typeof(Person).GetProperties().Where(
                             prop => Attribute.IsDefined(prop, typeof(PersonalDataAttribute)));
             foreach (var p in personalDataProps)
             {

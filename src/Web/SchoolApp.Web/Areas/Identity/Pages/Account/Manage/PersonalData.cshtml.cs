@@ -9,11 +9,11 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class PersonalDataModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly UserManager<Person> _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<SchoolAppUser> userManager,
+            UserManager<Person> userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;

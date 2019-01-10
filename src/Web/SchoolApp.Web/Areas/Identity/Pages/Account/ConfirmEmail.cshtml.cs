@@ -13,9 +13,9 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly UserManager<Person> _userManager;
 
-        public ConfirmEmailModel(UserManager<SchoolAppUser> userManager)
+        public ConfirmEmailModel(UserManager<Person> userManager)
         {
             _userManager = userManager;
         }
