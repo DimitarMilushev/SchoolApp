@@ -11,24 +11,24 @@
 </div>
 
 <conainer>
-    @foreach (var person in Model.Councils)
+    @foreach (var Person in Model.Councils)
     {
     <div class="d-flex justify-content-between w-50">
         <div class="image-holder w-50">
-            <img class="img-thumbnail" src="@person.PictureUrl" alt="https://www.freeiconspng.com/uploads/no-image-icon-6.png" />
+            <img class="img-thumbnail" src="@Person.PictureUrl" alt="https://www.freeiconspng.com/uploads/no-image-icon-6.png" />
         </div>
         <div class="data-holder w-75 px-3 mt-2">
             <div class="text-holder d-flex justify-content-between">
                 <h5>Длъжност: </h5>
-                <h5>@person.Role</h5>
+                <h5>@Person.Role</h5>
             </div>
             <div class="text-holder d-flex justify-content-between">
                 <h5>Име: </h5>
-                <h5>@person.FirstName @person.LastName</h5>
+                <h5>@Person.FirstName @Person.LastName</h5>
             </div>
             <div class="text-holder d-flex justify-content-between">
                 <h5>Катедра: </h5>
-                <h5>@person.Department</h5>
+                <h5>@Person.Department</h5>
             </div>
         </div>
     </div>

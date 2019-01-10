@@ -11,9 +11,9 @@ namespace SchoolApp.Services.DataServices.Council
 {
     public class CouncilService : ICouncilService
     {
-        private readonly IRepository<Person> councilRepository;
+        private readonly IRepository<Staff> councilRepository;
 
-        public CouncilService(IRepository<Person> councilRepository)
+        public CouncilService(IRepository<Staff> councilRepository)
         {
             this.councilRepository = councilRepository;
         }

@@ -15,10 +15,10 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LoginWith2faModel : PageModel
     {
-        private readonly SignInManager<Person> _signInManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
         private readonly ILogger<LoginWith2faModel> _logger;
 
-        public LoginWith2faModel(SignInManager<Person> signInManager, ILogger<LoginWith2faModel> logger)
+        public LoginWith2faModel(SignInManager<SchoolAppUser> signInManager, ILogger<LoginWith2faModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

@@ -12,12 +12,12 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {
-        private readonly UserManager<Person> _userManager;
-        private readonly SignInManager<Person> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
 
         public ExternalLoginsModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager)
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

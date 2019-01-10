@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SchoolApp.Data.Common;
 
 namespace SchoolApp.Data.Models
 {
-    public class Person : IdentityUser
+    public class Staff : BaseModel<int>
     {
         public string FirstName { get; set; }
 

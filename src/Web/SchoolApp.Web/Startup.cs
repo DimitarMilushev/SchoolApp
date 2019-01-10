@@ -29,7 +29,7 @@ namespace SchoolApp.Web
         {
             AutoMapperConfig.RegisterMappings(
                 typeof(CouncilViewModel).Assembly,
-                typeof(CreatePersonInputModel).Assembly);
+                typeof(CreateStaffInputModel).Assembly);
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -43,7 +43,7 @@ namespace SchoolApp.Web
                 options.UseSqlServer(
                     this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<Person>(options =>
+            services.AddDefaultIdentity<SchoolAppUser>(options =>
                 {
                     options.Password.RequiredLength = 3;
                     options.Password.RequireLowercase = false;
@@ -64,7 +64,7 @@ namespace SchoolApp.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SchoolAppContext context)
         {
             if (env.IsDevelopment())
             {

@@ -8,19 +8,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using SchoolApp.Data.Models;
 
+
 namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class TwoFactorAuthenticationModel : PageModel
     {
         private const string AuthenicatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}";
 
-        private readonly UserManager<Person> _userManager;
-        private readonly SignInManager<Person> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
 
         public TwoFactorAuthenticationModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager,
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager,
             ILogger<TwoFactorAuthenticationModel> logger)
         {
             _userManager = userManager;

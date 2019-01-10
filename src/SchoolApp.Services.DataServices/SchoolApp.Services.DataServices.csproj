@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data\SchoolApp.Data.Models\SchoolApp.Data.Models.csproj" />
-    <ProjectReference Include="..\SchoolApp.Data.Common\SchoolApp.Data.Common.csproj" />
     <ProjectReference Include="..\SchoolApp.Services.Models\SchoolApp.Services.Models.csproj" />
   </ItemGroup>
 

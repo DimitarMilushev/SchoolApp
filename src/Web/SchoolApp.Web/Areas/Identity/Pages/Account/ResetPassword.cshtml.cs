@@ -9,14 +9,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SchoolApp.Data.Models;
 
+
 namespace SchoolApp.Web.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<Person> _userManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
 
-        public ResetPasswordModel(UserManager<Person> userManager)
+        public ResetPasswordModel(UserManager<SchoolAppUser> userManager)
         {
             _userManager = userManager;
         }

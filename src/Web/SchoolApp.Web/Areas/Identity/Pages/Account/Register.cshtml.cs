@@ -11,19 +11,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using SchoolApp.Data.Models;
 
+
 namespace SchoolApp.Web.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<Person> _signInManager;
-        private readonly UserManager<Person> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager,
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -67,7 +68,7 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new Person { UserName = Input.Email, Email = Input.Email };
+                var user = new SchoolAppUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

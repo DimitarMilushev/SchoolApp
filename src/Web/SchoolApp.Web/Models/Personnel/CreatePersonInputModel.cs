@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Web.Models.Personnel
 {
-    public class CreatePersonInputModel
+    public class CreateStaffInputModel
     {
         public string FirstName { get; set; }
 

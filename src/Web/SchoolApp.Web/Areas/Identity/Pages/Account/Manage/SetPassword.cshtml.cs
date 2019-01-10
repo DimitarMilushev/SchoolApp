@@ -8,16 +8,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SchoolApp.Data.Models;
 
+
 namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<Person> _userManager;
-        private readonly SignInManager<Person> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
 
         public SetPasswordModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager)
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

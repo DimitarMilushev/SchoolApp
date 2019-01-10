@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Services.Models.Council
 {
-    public class CouncilDetailsViewModel : IMapFrom<Person>
+    public class CouncilDetailsViewModel : IMapFrom<Staff>
     {
         public string FirstName { get; set; }
 

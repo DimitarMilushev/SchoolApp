@@ -14,20 +14,20 @@ namespace SchoolApp.Data
         private readonly SchoolAppContext context;
         private DbSet<TEntity> dbSet;
 
-        public DbRepository(SchoolAppContext context, DbSet<TEntity> dbSet)
+        public DbRepository(SchoolAppContext context)
         {
             this.context = context;
             this.dbSet = this.context.Set<TEntity>();
         }
 
-        public IQueryable<TEntity> All()
-        {
-            return this.dbSet;
-        }
-
         public Task AddAsync(TEntity entity)
         {
             return this.dbSet.AddAsync(entity);
+        }
+
+        public IQueryable<TEntity> All()
+        {
+            return this.dbSet;
         }
 
         public void Delete(TEntity entity)

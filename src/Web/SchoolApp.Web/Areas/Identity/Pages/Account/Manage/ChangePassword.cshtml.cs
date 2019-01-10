@@ -12,13 +12,13 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class ChangePasswordModel : PageModel
     {
-        private readonly UserManager<Person> _userManager;
-        private readonly SignInManager<Person> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
 
         public ChangePasswordModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager,
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager,
             ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;

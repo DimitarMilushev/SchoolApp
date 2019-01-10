@@ -8,17 +8,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using SchoolApp.Data.Models;
 
+
 namespace SchoolApp.Web.Areas.Identity.Pages.Account.Manage
 {
     public class ResetAuthenticatorModel : PageModel
     {
-        UserManager<Person> _userManager;
-        private readonly SignInManager<Person> _signInManager;
+        UserManager<SchoolAppUser> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
         ILogger<ResetAuthenticatorModel> _logger;
 
         public ResetAuthenticatorModel(
-            UserManager<Person> userManager,
-            SignInManager<Person> signInManager,
+            UserManager<SchoolAppUser> userManager,
+            SignInManager<SchoolAppUser> signInManager,
             ILogger<ResetAuthenticatorModel> logger)
         {
             _userManager = userManager;

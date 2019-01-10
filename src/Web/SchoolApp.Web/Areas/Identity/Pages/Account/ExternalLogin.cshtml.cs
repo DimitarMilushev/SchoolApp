@@ -16,13 +16,13 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ExternalLoginModel : PageModel
     {
-        private readonly SignInManager<Person> _signInManager;
-        private readonly UserManager<Person> _userManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
+        private readonly UserManager<SchoolAppUser> _userManager;
         private readonly ILogger<ExternalLoginModel> _logger;
 
         public ExternalLoginModel(
-            SignInManager<Person> signInManager,
-            UserManager<Person> userManager,
+            SignInManager<SchoolAppUser> signInManager,
+            UserManager<SchoolAppUser> userManager,
             ILogger<ExternalLoginModel> logger)
         {
             _signInManager = signInManager;
@@ -115,7 +115,7 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                var user = new Person { UserName = Input.Email, Email = Input.Email };
+                var user = new SchoolAppUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SchoolApp.Data.Common\SchoolApp.Data.Common.csproj" />
+    <ProjectReference Include="..\SchoolApp.Data.Common\SchoolApp.Data.Common.csproj" />
     <ProjectReference Include="..\SchoolApp.Data.Models\SchoolApp.Data.Models.csproj" />
   </ItemGroup>
 

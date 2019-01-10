@@ -14,10 +14,10 @@ namespace SchoolApp.Web.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<Person> _signInManager;
+        private readonly SignInManager<SchoolAppUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
-        public LogoutModel(SignInManager<Person> signInManager, ILogger<LogoutModel> logger)
+        public LogoutModel(SignInManager<SchoolAppUser> signInManager, ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
